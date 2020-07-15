@@ -1,0 +1,259 @@
+// $color_card: #e08e79;
+$color_card: #d3723a;
+$color_card_hover: #b35f2f;
+
+@mixin contenedor-de-tareas {
+    border: none;
+    background-color: $color_card;
+    border-radius: 20px;
+    padding: 30px;
+    margin: 0 20px 0 20px;
+}
+@mixin button {
+    background-color: transparent;
+    border: 0;
+    color: white;
+    width: 35px;
+    height: 35px;
+    padding: 0;
+    outline: none;
+    // margin-top: 5px;
+}
+
+body {
+    background-color: #eff0a8;
+    font-family: 'Livvic', sans-serif;
+    box-sizing: content-box;
+    margin: 0;
+}
+.presentacion-header {
+    // background-color: #e08e79;
+    background-color: #17d1d1;
+
+    color: white;
+    padding-bottom: 40px;
+    border-radius: 20px 20px 100px 0px;
+    margin: 20px;
+    box-shadow: 5px 5px 5px rgba(70, 69, 69, 0.445);
+    .presentacion {
+        display: flex;
+        flex-wrap: wrap;
+        .presentacion-container {
+            margin: 0 20px 0 20px;
+            flex: 1;
+            .descripcion-tareas {
+                margin: 0;
+            }
+        }
+        .imagen-presentacion-container {
+            width: 200px;
+            display: inline-block;
+            margin-right: 50px;
+            & img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+
+    .tarea-actual {
+        @include contenedor-de-tareas();
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        .agregar-tarea {
+            border: none;
+        }
+        .input-nueva-tarea {
+            border: none;
+            padding: 10px 10px 10px 10px;
+            border-radius: 10px;
+            display: inline-block;
+            margin-right: 10px;
+            width: 200px;
+            outline: none;
+            margin-top: 5px;
+        }
+        .input-time,
+        .input-date {
+            border: none;
+            padding: 7.5px 10px 7.5px 10px;
+            border-radius: 10px;
+            display: inline-block;
+            margin-right: 10px;
+            width: 130px;
+            font-family: 'Livvic', sans-serif;
+            outline: none;
+            margin-top: 5px;
+            color: rgba(0, 0, 0, 0.712);
+        }
+        .buton-nueva-tarea {
+            @include button();
+            transition: ease 0.5s;
+
+            .fas {
+                font-size: 35px;
+                cursor: pointer;
+            }
+        }
+        .buton-nueva-tarea:hover {
+            color: rgba(122, 118, 118, 0.308);
+            transition: ease 0.5s;
+        }
+    }
+}
+.tareas_pendientes {
+    padding: 30px;
+    color: white;
+    &texto {
+        color: white;
+    }
+}
+.tarea-nueva {
+    align-content: center;
+    @include contenedor-de-tareas();
+    color: white;
+    margin: 20px;
+    width: 100%;
+    list-style: none;
+    box-shadow: 5px 5px 5px rgba(70, 69, 69, 0.445);
+
+    .tarea-nueva-container {
+        margin: 0 0 0 0;
+        display: flex;
+        justify-content: space-evenly;
+        .tarea-datos {
+            display: flex;
+            .nombre-de-tarea {
+                text-shadow: none;
+                margin-right: 20px;
+            }
+            .fecha-tarea {
+                text-shadow: none;
+                display: flex;
+                align-items: center;
+                color: rgba(0, 0, 0, 0.719);
+            }
+        }
+
+        .butons-tarea-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .butons-tarea-1 {
+                @include button();
+                transition: ease 0.5s;
+                margin: 12px;
+
+                .fas {
+                    font-size: 25px;
+                    cursor: pointer;
+                }
+            }
+            .butons-tarea-1:hover {
+                color: rgba(122, 118, 118, 0.37);
+                transition: ease 0.5s;
+            }
+            .butons-tarea-2 {
+                @include button();
+                transition: ease 0.5s;
+                margin: 12px;
+
+                .fas {
+                    font-size: 25px;
+                    cursor: pointer;
+                }
+            }
+            .butons-tarea-2:hover {
+                color: rgba(122, 118, 118, 0.37);
+                transition: ease 0.5s;
+            }
+        }
+    }
+}
+.tarea-nueva:hover {
+    background-color: $color_card_hover;
+    box-shadow: 4px 4px 4px rgba(70, 69, 69, 0.445);
+}
+
+.tareas-pendientes,
+.tareas-completadas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 30px;
+    margin-right: 30px;
+    padding: 20px;
+}
+
+.tareas-completadas-container {
+    text-shadow: 2px 2px rgb(70, 69, 69);
+    display: flex;
+    justify-content: center;
+    h2 {
+        background-color: #348f8f;
+        border-radius: 20px 20px 100px 0px;
+        margin: 20px;
+        padding: 20px;
+        padding-right: 30px;
+        box-shadow: 5px 5px 5px rgba(70, 69, 69, 0.445);
+    }
+}
+.tareas-pendientes-container {
+    text-shadow: 2px 2px rgb(70, 69, 69);
+    display: flex;
+    justify-content: center;
+    h2 {
+        background-color: #348f8f;
+        border-radius: 20px 20px 100px 0px;
+        margin: 20px;
+        padding: 20px;
+        padding-right: 30px;
+        box-shadow: 5px 5px 5px rgba(70, 69, 69, 0.445);
+    }
+}
+footer {
+    background-color: #348f8f;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-weight: 500;
+    width: 100%;
+}
+
+ul {
+    padding: 0;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.815);
+}
+.display-none {
+    display: none;
+}
+.error::placeholder {
+    color: red;
+}
+
+@media (max-width: 768px) {
+    .tarea-nueva .tarea-nueva-container .butons-tarea-container .butons-tarea-1 {
+        margin-right: 0;
+    }
+    .tarea-nueva .tarea-nueva-container .butons-tarea-container .butons-tarea-2 {
+        margin-left: 0;
+    }
+    .presentacion-header .presentacion .imagen-presentacion-container {
+        margin-right: 10px;
+    }
+    .presentacion-header .tarea-actual .buton-nueva-tarea {
+        // border: 0;
+        // color: #fff;
+        // width: 35px;
+        // height: 35px;
+        // padding: 0;
+        // outline: none;
+        // transition: .5s ease;
+        position: relative;
+        left: 30px;
+    }
+}
