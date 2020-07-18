@@ -1,14 +1,12 @@
 {
-    "name": "To Do List App",
+    "name": "primer-proyecto-2",
     "version": "1.0.0",
+    "private": true,
+    "homepage": "https://andypalmera.github.io/to-do-list-app/",
     "description": "To Do list",
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/mbelenmontoya/AdaDesignSystem.git"
     },
     "author": "",
     "license": "ISC",
@@ -20,9 +18,5 @@
         "gulp-postcss": "^8.0.0",
         "gulp-sass": "^4.0.2",
         "gulp-sourcemaps": "^2.6.5"
-    },
-    "bugs": {
-        "url": "https://github.com/mbelenmontoya/AdaDesignSystem/issues"
-    },
-    "homepage": "https://github.com/mbelenmontoya/AdaDesignSystem#readme"
+    }
 }
